@@ -25,7 +25,7 @@ public class Registro : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("nome", inputNome.text);
         form.AddField("email", inputEmail.text);
-        UnityWebRequest www = UnityWebRequest.Post("http://localhost/sqlconnect/registro.php",form);
+        UnityWebRequest www = UnityWebRequest.Post("http://jornadacircular.infinityfreeapp.com/sqlconnect/registro.php", form);
         yield return www.SendWebRequest();
 
         if(www.result != UnityWebRequest.Result.Success)

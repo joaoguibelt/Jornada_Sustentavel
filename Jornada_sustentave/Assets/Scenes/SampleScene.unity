@@ -2998,7 +2998,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1278052588}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Registro, Assembly-CSharp
         m_MethodName: VerificaInput
         m_Mode: 1
@@ -24741,7 +24741,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1278052587}
   - component: {fileID: 1278052586}
-  - component: {fileID: 1278052588}
+  - component: {fileID: 1278052589}
   m_Layer: 0
   m_Name: Controle
   m_TagString: Untagged
@@ -24779,7 +24779,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1278052588
+--- !u!114 &1278052589
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24788,12 +24788,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1278052585}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97fe1b78f59b10a41884753cc60efed9, type: 3}
+  m_Script: {fileID: 11500000, guid: c7e09ab5f6015ab489788c5ac518496f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputNome: {fileID: 1342259592}
-  inputEmail: {fileID: 186295863}
-  botaoConfirmar: {fileID: 1576126590}
+  _registro: registros/player
+  _nome: {fileID: 1342259592}
+  _email: {fileID: 186295863}
+  _confirma: {fileID: 1576126590}
 --- !u!1 &1278411365
 GameObject:
   m_ObjectHideFlags: 0
@@ -26667,7 +26668,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1278052588}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Registro, Assembly-CSharp
         m_MethodName: VerificaInput
         m_Mode: 1
@@ -30833,7 +30834,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1278052588}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Registro, Assembly-CSharp
         m_MethodName: ChamarRegistro
         m_Mode: 1

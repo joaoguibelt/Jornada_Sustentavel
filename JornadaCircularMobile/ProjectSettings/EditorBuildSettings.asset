@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Mobile.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
+  - enabled: 1
+    path: Assets/Scenes/PC.unity
+    guid: 4224382470a272e42b7580159ab19be1
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: e2c4c17317ae63543b057e5ae34dd4e3, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: a544b6265577368489ba483dd811fab1, type: 2}

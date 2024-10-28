@@ -33,9 +33,9 @@ public class ControleCanvas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        texto1.text = "Para começar " + nome + ", é preciso se lembrar que a economia circular se baseia em um ciclo sustentável.\r\n Desse modo, tudo começa com a extração da matéria prima, passa pela produção, consumo, precisa haver a gestão do residuo e se possível reciclar ou voltar ao meio ambiente.";
-        texto2.text = "Olá " + nome + " muito prazer, eu também gostaria de saber seu gênero. Não que isso seja  fundamental, mas queremos gerar indicadores reais dos nossos usuários";
-        texto3.text = "Olá " + nome + ", eu sou a Dora, a catadora! Vamos juntos no Jogo da Jornada Circular, aprendendo sobre sustentabilidade e recebendo pontos para o nosso Clube de Benefícios Circular?";
+        texto1.text = "Para começar " + nome + ", é preciso se lembrar que a economia circular se baseia em um ciclo sustentável.\r\n Desse modo, tudo começa com a extração da matéria prima, passa pela produção, consumo, precisa haver a gestão do resíduo e se possível reciclar ou voltar ao meio ambiente.";
+        texto2.text = "Olá " + nome + " muito prazer, eu também gostaria de saber seu gênero.\nNão que isso seja  fundamental, mas queremos gerar indicadores reais dos nossos usuários";
+        texto3.text = "Olá " + nome + "!\nEu sou a Dora, a catadora! Vamos juntos no Jogo da Jornada Circular, aprendendo sobre sustentabilidade e recebendo pontos para o nosso Clube de Benefícios Circular?";
    
         if(progresso == 4)
         {

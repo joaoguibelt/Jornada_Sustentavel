@@ -25,7 +25,7 @@ public class ControleBanco : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("nome", inputNome.text);
         form.AddField("email", inputEmail.text);
-        UnityWebRequest www = UnityWebRequest.Post("http://jornadacircular.infinityfreeapp.com/sqlconnect/registro.php", form);
+        UnityWebRequest www = UnityWebRequest.Post("http://localhost", form); //botar a url da onde está o arquivo php
         yield return www.SendWebRequest();
 
         if (www.result != UnityWebRequest.Result.Success)

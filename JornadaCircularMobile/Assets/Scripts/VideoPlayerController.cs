@@ -42,9 +42,9 @@ public class VideoPlayerController : MonoBehaviour
             {
                 if (importancia ==  2)
                 {
-                    telaVideo.gameObject.SetActive(false);
-                    proximaTela.gameObject.SetActive(true);
                     musicaJogo.Play();
+                    proximaTela.gameObject.SetActive(true);
+                    telaVideo.gameObject.SetActive(false);
                 }
                 else if(importancia == 1)
                 {

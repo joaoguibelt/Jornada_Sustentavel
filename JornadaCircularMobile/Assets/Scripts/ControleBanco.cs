@@ -14,10 +14,18 @@ public class ControleBanco : MonoBehaviour
     public string inputNome;
     public string inputEmail;
     public ControleCanvas controle;
-    private int pontos;
+    private string venceu = "false";
+    private int pontosEu;
+    private int pontosFamilia;
+    private int pontosTrabalho;
+    private int pontosSociedade;
     public void ChamarRegistro()
     {
-        pontos = controle.pontos_Total;
+        pontosSociedade = controle.pontos_Total - pontosEu - pontosFamilia - pontosTrabalho;
+        if(controle.pontos_Total > 21)
+        {
+            venceu = "true";
+        }
         StartCoroutine(Registrar());
     }
 
@@ -27,7 +35,11 @@ public class ControleBanco : MonoBehaviour
         form.AddField("nome", inputNome);
         form.AddField("email", inputEmail);
         form.AddField("genero", inputGenero);
-        form.AddField("pontos", pontos);
+        form.AddField("pontosEu", pontosEu);
+        form.AddField("pontosFamilia", pontosFamilia);
+        form.AddField("pontosTrabalho", pontosTrabalho);
+        form.AddField("pontosSociedade", pontosSociedade);
+        form.AddField("ganhou", venceu);
         UnityWebRequest www = UnityWebRequest.Post("https://conexaocircular.com/quiz/registro.php", form); //botar a url da onde está o arquivo php
         yield return www.SendWebRequest();
 
@@ -62,7 +74,7 @@ public class ControleBanco : MonoBehaviour
         }
         else if(indexDropdowm == 4)
         {
-            inputGenero = "Não-Binário";
+            inputGenero = "Nao-Binario";
         }
     }
 
@@ -70,5 +82,18 @@ public class ControleBanco : MonoBehaviour
     {
         inputNome = Nome.text;
         inputEmail = Email.text;
+    }
+
+    public void GuardarPontosEu()
+    {
+        pontosEu = controle.pontos_Total;
+    }
+    public void GuardarPontosFamilia()
+    {
+        pontosFamilia = controle.pontos_Total - pontosEu;
+    }
+    public void GuardarPontosTrabalho()
+    {
+        pontosTrabalho = controle.pontos_Total - pontosEu - pontosFamilia;
     }
 }

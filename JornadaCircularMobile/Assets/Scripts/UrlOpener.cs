@@ -11,4 +11,9 @@ public class UrlOpener : MonoBehaviour
     {
         Application.OpenURL(url);
     }
+
+    public void AbriNoMesmoGuia()
+    {
+        Application.ExternalEval("window.open('" + url + "','_self')");
+    }
 }
